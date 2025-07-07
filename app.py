@@ -11,7 +11,7 @@ def serve_report():
 
     file_path = f"reports/{country}.md"
 print("== Debug: File path exists:", os.path.exists(file_path))
-print("== Debug: Absolute file path:", os.path.abspath(file_path))8opopop
+print("== Debug: Absolute file path:", os.path.abspath(file_path))
     if not os.path.exists(file_path):
         return f"Report for {country} not found.", 404
 
