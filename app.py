@@ -1,5 +1,5 @@
-from flask import Flask, request, abort
 import os
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -19,7 +19,8 @@ def serve_report():
     with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read()
 
-    return f"<pre>{content}</pre>"
+    # Return raw Markdown content
+    return content
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=10000)
